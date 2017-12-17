@@ -1,0 +1,1095 @@
+/* GLOBAL */
+
+* {
+    margin: 0;
+    font-family: 'roboto', Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+header {
+    background-color: #fff;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .7);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-family: 'roboto';
+    color: #313131;
+}
+
+header li a:hover,
+header .menu-btn:hover {
+    background-color: #393939;
+    color: #fff;
+}
+
+header #logo_boks {
+    display: block;
+    padding-top: 5px;
+    text-align: center;
+    width: 155px;
+}
+
+
+/* MENU */
+
+#logo {
+    position: absolute;
+}
+
+header .menu {
+    clear: both;
+    max-height: 0px;
+    transition: max-height .2s ease-out;
+    margin: 0 -1px 0 -1px;
+}
+
+
+/* MENU ICON */
+
+header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+header .menu-icon .navicon {
+    background: #313131;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 22px;
+}
+
+header .menu-icon .navicon:before,
+header .menu-icon .navicon:after {
+    background: #313131;
+    content: '';
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+header .menu-icon .navicon:before {
+    top: 6px;
+}
+
+header .menu-icon .navicon:after {
+    top: -6px;
+}
+
+
+/* MENU BUTTON */
+
+header .menu-btn {
+    display: none;
+}
+
+header .menu-btn:checked~.menu {
+    max-height: 200px;
+}
+
+header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
+/* FORSIDE */
+
+#baggrund {
+    padding: 10px 0;
+}
+
+#baggrund img {
+    margin-top: 10px;
+}
+
+#forside #seneste {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: -2;
+}
+
+#forside #seneste .billede {
+    width: 50%;
+    background-color: #313131;
+}
+
+#forside #seneste .billede img {
+    margin: 30px 0 20px 0;
+    width: 90%;
+}
+
+#forside #seneste .tekst {
+    width: 50%;
+    text-align: center;
+    background-color: #313131;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+#forside #seneste .tekst h2 {
+    font-size: 40px;
+    margin: 10% 0 20px 0;
+}
+
+#forside #seneste .tekst p {
+    margin: 30px;
+    text-align: left;
+    font-size: 20px;
+    font-style: oblique;
+}
+
+#forside #upcoming {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#forside #upcoming .tekst {
+    margin: 30px 0;
+    width: 50%;
+    text-align: center
+}
+
+#forside #upcoming .tekst div {
+    text-align: left;
+}
+
+#forside #upcoming .tekst img {
+    width: 72%;
+    margin-left: -20px;
+}
+
+#forside #upcoming .tekst h2 {
+    margin: 20px 0 -10px 0;
+    text-align: center;
+    color: #313131;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+#forside #upcoming .tekst h3 {
+    text-align: center;
+    color: #313131;
+    font-size: 30px;
+}
+
+#forside #upcoming .tekst p {
+    margin: 30px;
+    text-align: left;
+    font-size: 20px;
+    font-style: oblique;
+}
+
+#forside #upcoming .billede {
+    width: 50%;
+    position: relative;
+}
+
+#forside #upcoming .billede img {
+    margin: 30px 0 20px 0;
+    width: 100%;
+}
+
+
+/* LÆS MERE KNAPPER */
+
+.button {
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px 20px;
+    margin: 20px 0;
+    position: relative;
+    color: #313131;
+    z-index: 1;
+    text-decoration: none;
+}
+
+
+/* KNAP 1 */
+
+.laes_mere1 {
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.laes_mere1:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    left: -100%;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.laes_mere1:hover {
+    color: #313131;
+}
+
+.laes_mere1:hover:before {
+    left: 0;
+}
+
+
+/* KNAP 2 */
+
+.laes_mere2 {
+    border: 2px solid #313131;
+    border-radius: 2px;
+    color: #313131;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.laes_mere2:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    left: -100%;
+    background-color: #313131;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.laes_mere2:hover {
+    color: #fff !important;
+}
+
+.laes_mere2:hover:before {
+    left: 0;
+}
+
+
+/* CASES */
+
+#cases {
+    display: flex;
+    width: 80%;
+    margin: 10px auto 0 auto;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#case_oeverst {
+    width: 100%;
+    margin: 5px;
+}
+
+#case_oeverst img {
+    width: 100%;
+    box-shadow: inset 0 0 4px 2px #000;
+}
+
+.case {
+    flex-grow: 1;
+    flex-basis: 30%;
+    height: 250px;
+    margin: 5px;
+    box-shadow: inset 0 0 4px 2px #000;
+}
+
+#overskrift {
+    color: #292929;
+    padding-top: 80px;
+    text-align: center;
+}
+
+#vinstuen_case {
+    background-image: url(../images/vinstuen.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#aros_case {
+    background-image: url(../images/aros.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#magasin_case {
+    background-image: url(../images/magasin.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#cover_case {
+    background-image: url(../images/cover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#banner_case {
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#ccr_case {
+    background-image: url(../images/ccr.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* CASE INDIVIDUELLE */
+
+.section1 {
+    padding-top: 80px;
+    width: 80%;
+    margin: 0 auto 10px auto;
+    display: flex;
+    text-align: center;
+}
+
+.section1 .billede {
+    width: 50%;
+    order: 1;
+    text-align: center;
+    margin: auto;
+}
+
+.section1 .billede img {
+    width: 100%;
+    min-width: 450px;
+    max-width: 600px;
+}
+
+.section1 .tekst {
+    width: 50%;
+    order: 2;
+    margin: 40px;
+    text-align: center;
+    color: #313131;
+}
+
+.section1 .tekst h1 {
+    font-size: 40px;
+}
+
+.section1 .tekst p {
+    margin: 30px;
+    text-align: left;
+    font-size: 20px;
+    font-style: oblique;
+}
+.section1 .tekst p a:hover {
+    border-bottom: 2px solid #313131;
+}
+
+.section1 .tekst a {
+    color: #313131;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.section_container {
+    background-color: #313131;
+    height: auto;
+    width: 100%;
+}
+
+.section2 {
+    width: 80%;
+    margin: 0 auto 50px auto;
+    display: flex;
+}
+
+.section2 .tekst {
+    margin: 40px;
+    width: 50%;
+    color: #fff;
+}
+
+.section2 .tekst img {
+    margin-left: -35%;
+    width: 100%;
+}
+
+.section2 .tekst p {
+    margin: 30px;
+    text-align: left;
+    font-size: 20px;
+    font-style: oblique;
+}
+
+.section2 .tekst p a {
+    color: #fff;
+}
+
+.section2 .billede {
+    width: 50%;
+    margin: auto;
+    text-align: right;
+}
+
+.section2 .billede img {
+    max-width: 500px;
+}
+
+.section2 #billede_ccr {
+    width: 50%;
+    position: relative;
+}
+
+.section2 #billede_ccr img {
+    width: 100%;
+    padding: 30px 0;
+}
+
+.section3 {
+    width: 80%;
+    margin: -45px auto 10px auto;
+    display: flex;
+    text-align: center;
+}
+
+.section3 .billede {
+    width: 50%;
+    order: 1;
+    text-align: center;
+    margin: auto;
+}
+
+.section3 .billede img {
+    width: 100%;
+    min-width: 450px;
+    max-width: 600px;
+}
+
+.section3 .tekst {
+    width: 50%;
+    order: 2;
+    margin: 40px;
+    text-align: center;
+    color: #313131;
+}
+
+.section3 .tekst h1 {
+    font-size: 40px;
+}
+
+.section3 .tekst p {
+    margin: 30px;
+    text-align: left;
+    font-size: 20px;
+    font-style: oblique;
+}
+
+.section3 .tekst a {
+    color: #313131;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/* BANNER */
+
+.section1 iframe {
+    width: 374px;
+    height: 312px;
+}
+
+
+/* OM */
+
+.section1 #billede_om {
+    width: 50%;
+}
+
+.section1 #billede_om img {
+    padding: 10px;
+}
+
+.section2 #tekst_om {
+    color: #fff;
+    width: 50%;
+    margin: 40px;
+    text-align: center;
+}
+
+.section2 #tekst_om h1 {
+    font-size: 40px;
+}
+
+.section2 #tekst_om h4 {
+    font-size: 30px;
+    list-style: none;
+    padding-top: 20px;
+    font-weight: 300;
+}
+
+.section2 .billede {
+    width: 50%;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* IMAGE HOVER */
+
+.hover_snip {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    min-width: auto;
+    max-width: 500px;
+    min-height: 250px;
+    max-height: 250px;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+}
+
+.hover_snip * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.hover_snip:before {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    top: 100%;
+    content: '';
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+}
+
+.hover_snip img {
+    display: none;
+}
+
+.hover_snip figcaption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hover_snip h5 {
+    margin: 0;
+    opacity: 0;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.hover_snip h3 {
+    margin: 0;
+    opacity: 0;
+    letter-spacing: 1px;
+    color: #000;
+    font-size: 30px;
+}
+
+.hover_snip h3 {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    text-transform: uppercase;
+    font-weight: 400;
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    margin-bottom: 5px;
+}
+
+.hover_snip h5 {
+    font-weight: normal;
+    background-color: #292929;
+    padding: 3px 10px;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.hover_snip:hover:before,
+.hover_snip.hover:before {
+    top: 10px;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.hover_snip:hover h3,
+.hover_snip.hover h3,
+.hover_snip:hover h5,
+.hover_snip.hover h5 {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.hover_snip:hover h3,
+.hover_snip.hover h3 {
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.hover_snip:hover h5,
+.hover_snip.hover h5 {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #313131;
+    margin-top: 5px;
+}
+
+footer section {
+    width: 300px;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: left;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+footer section img {
+    float: left;
+    padding: 4px 10px;
+    filter: grayscale(100%);
+    transition: 0.3s ease;
+}
+
+footer section img:hover {
+    filter: grayscale(0%);
+}
+
+footer section div {
+    float: left;
+}
+
+footer section div h3 {
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer_forside {
+    margin-top: -5px;
+}
+
+#individuel_case_footer_ccr {
+    margin-top: 10px;
+}
+
+
+/* PC OG TABLET VERSION */
+
+@media screen and (min-width: 769px) {
+    header {
+        height: 65px;
+    }
+    header li {
+        float: left;
+        margin-right: 5px;
+    }
+    header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        margin-right: 20px;
+    }
+    header .menu-icon {
+        display: none;
+    }
+    header #logo_boks {
+        position: absolute;
+    }
+    header li a:hover,
+    header .menu-btn:hover {
+        background-color: #d9d9d9;
+        color: #313131;
+    }
+    /* FORSIDE */
+    #baggrund {
+        width: 100%;
+        padding-top: 60px;
+        text-align: center;
+    }
+    #baggrund img {
+        width: 50%;
+    }
+    #laes_mere_upcoming {
+        display: none;
+    }
+    /*CASES */
+    #overskrift {
+        font-size: 50px;
+    }
+    /* CASE INDIVIDUEL */
+    .section2 #billede_ccr img {
+        bottom: 0;
+        position: absolute;
+    }
+    /* MENU KNAPPER */
+    .current {
+        background-color: #313131;
+        color: #fff !important;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .menu_knap {
+        font-size: 20px;
+        display: inline-block;
+        padding: 21px 40px 15px 40px;
+        margin-bottom: 0px;
+        position: relative;
+        color: #fff;
+        z-index: 1;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .menu_knap {
+        color: #313131;
+        overflow: hidden;
+        -webkit-transition: all 0.15s ease-in-out;
+        -o-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
+    }
+    .menu_knap:before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        background-color: #313131;
+        -webkit-transition: all 0.15s ease-in-out;
+        -o-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
+    }
+    .menu_knap:hover {
+        color: #fff;
+    }
+    .menu_knap:hover:before {
+        top: 0;
+    }
+}
+
+
+/* PC VERSION */
+
+@media screen and (min-width: 1025px) and (max-width: 1680px) {
+    .section2 .tekst img {
+        margin-left: -50%;
+    }
+}
+
+
+/* STORE SKÆRME */
+
+@media screen and (min-width: 1681px) {}
+
+
+/* TABLET VERSION */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* FORSIDE */
+    #forside #seneste .billede {
+        padding: 5% 0;
+    }
+    #forside #upcoming .billede img {
+        position: absolute;
+        bottom: 0;
+    }
+    /* IMAGE HOVER */
+    .hover_snip {
+        min-height: 200px;
+    }
+    /* CASES */
+    #cases {
+        width: 90%;
+        margin: 10px auto 0 auto;
+    }
+    .case {
+        width: 50%;
+        flex-basis: 48%;
+        flex-grow: 1;
+        height: 200px;
+    }
+    /* CASE INDIVIDUEL */
+    .section1 {
+        width: 95%;
+    }
+    .section1 .billede {
+        margin: auto;
+    }
+    .section1 .billede img {
+        min-width: 350px;
+    }
+    .section1 .tekst p {
+        margin: 5px 0 0 0;
+    }
+    .section2 {
+        width: 95%;
+    }
+    .section2 .billede img {
+        width: 350px;
+    }
+    .section2 .tekst p {
+        margin: 5px 0 0 0;
+    }
+    .section3 {
+        width: 95%;
+    }
+    .section3 .billede img {
+        margin-left: -30px;
+    }
+}
+
+
+/* MOBIL VERSION */
+
+@media screen and (max-width: 768px) {
+    /* MENU */
+    header li a {
+        text-align: center;
+    }
+    #logo img {
+        width: 140px;
+        margin-left: -8px;
+    }
+    /* FORSIDE */
+    #baggrund {
+        width: 100%;
+        padding: 70px 0 10px 0;
+    }
+    #baggrund img {
+        width: 100%;
+    }
+    #forside #seneste .billede {
+        width: 100%;
+    }
+    #forside #seneste .billede img {
+        margin-left: -9%;
+        width: 100%;
+    }
+    #forside #seneste .tekst {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    #forside #seneste .tekst h2 {
+        margin-top: 0;
+    }
+    #forside #upcoming .tekst {
+        width: 100%;
+    }
+    #forside #upcoming .tekst a {
+        display: none;
+    }
+    #laes_mere_upcoming {
+        margin: 0 auto 25px auto;
+    }
+    #forside #upcoming .billede {
+        width: 100%;
+        text-align: right;
+    }
+    #forside #upcoming .billede img {
+        bottom: clear;
+        margin-top: -30px;
+        width: 95%;
+    }
+    /* CASES */
+    #cases {
+        width: 100%;
+        margin: 0 auto;
+        margin: 10px auto 0 auto;
+    }
+    #case_oeverst {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .case {
+        width: 100%;
+        flex-basis: 100%;
+        height: 200px;
+        margin: 5px 0;
+    }
+    #naeste1 {
+        display: none;
+    }
+    /* IMAGE HOVER */
+    .hover_snip {
+        max-width: 768px;
+        min-height: 200px;
+    }
+    /* CASE INDIVIDUEL */
+    .section1 {
+        flex-wrap: wrap;
+        width: 95%;
+    }
+    .section1 .billede,
+    .section1 .tekst {
+        width: 100%;
+        margin: 0;
+    }
+    .section1 .billede {
+        order: 2;
+        margin: 0 auto;
+    }
+    .section1 .billede img {
+        min-width: 200px;
+    }
+    .section1 .tekst {
+        order: 1;
+    }
+    .section1 .tekst h1 {
+        font-weight: 300px;
+    }
+    .section1 .tekst p {
+        margin: 10px 5px;
+    }
+    .section2 {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .section2 .tekst {
+        width: 100%;
+        margin: 20px 0 0 0;
+    }
+    .section2 .tekst p {
+        margin: 10px;
+    }
+    .section2 .billede {
+        width: 100%;
+        text-align: center;
+    }
+    .section2 .billede img {
+        width: 100%;
+        min-width: 200px;
+        max-width: 500px;
+    }
+    .section2 #billede_ccr {
+        width: 100%;
+        text-align: center;
+    }
+    .section2 #billede_ccr img {
+        width: 95%;
+    }
+    .section3 {
+        width: 100%;
+    }
+    .section3 .billede {
+        display: none;
+    }
+    .section3 .tekst {
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+    .section3 .tekst p {
+        margin: 10px 10px;
+    }
+    /* OM */
+    .section1 #billede_om {
+        order: 2;
+        margin: 0 auto;
+    }
+    .section1 #billede_om img {
+        width: 100%;
+    }
+    .section2 #tekst_om h1 {
+        font-size: 35px;
+        margin-top: 15px;
+    }
+    .section2 #tekst_om {
+        width: 100%;
+        margin: 10px;
+    }
+    /* BANNER */
+    .section1 iframe {
+        width: 224px;
+        height: 187px;
+    }
+    /* FOOTER */
+    footer section {
+        width: 257px;
+        ;
+    }
+    footer section div h1 {
+        font-weight: 500;
+    }
+    footer section div h3 {
+        font-size: 15px;
+    }
+    footer section img {
+        width: 40px;
+        padding: 14px 10px
+    }
+    #individuel_case_footer {
+        margin-top: -50px;
+    }
+    #individuel_case_footer_ccr {
+        margin-top: -50px;
+    }
+}
